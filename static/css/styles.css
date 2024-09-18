@@ -1,0 +1,182 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    background-color: #2e0249;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+header {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #570a57;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #f0a6ca;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #d6b0e0;
+}
+
+/* Section Styles */
+.section {
+    margin-bottom: 50px;
+}
+
+.section h2 {
+    border-bottom: 2px solid #9c27b0;
+    padding-bottom: 10px;
+    color: #e0bbff;
+}
+
+.section h3 {
+    color: #c77dff;
+}
+
+.section p, .section ul {
+    line-height: 1.6;
+    color: #e0d0f0;
+}
+
+.section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.section ul li {
+    background-color: #570a57;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+a {
+    color: #ff79c6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    .flex-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .flex-col {
+        flex: 1;
+        margin: 10px;
+    }
+}
+
+.education-item, .experience-item {
+    margin-bottom: 30px;
+}
+
+.education-item h3, .experience-item h3 {
+    margin-bottom: 5px;
+    color: #c77dff;
+}
+
+.education-item p, .experience-item p {
+    position: relative;
+    margin: 0;
+}
+
+.education-item p .date, .experience-item p .date {
+    float: right;
+    color: #d6b0e0;
+}
+.education-item p strong, .experience-item p strong {
+    color: #e0bbff;
+}
+
+.education-item::after, .experience-item::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.socials-section {
+    background-color: #570a57;
+    padding: 20px 0;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.socials a {
+    color: #d6b0e0;
+    text-decoration: none;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+}
+
+.socials a:hover {
+    color: #f0a6ca; 
+}
+
+.socials i {
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
+@media (max-width: 576px) {
+    .socials {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+}

@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SJ's CV</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <!-- Include Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to SJ's CV!</h1>
+    </header>
+    <div class="socials-section">
+        <div class="container">
+            <div class="socials">
+                <a href="mailto:yshijie1999@gmail.com"><i class="fas fa-envelope"></i> yshijie1999@gmail.com</a>
+                <a href="https://www.linkedin.com/in/sjyuxyz/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/ysjprojects" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+        </div>
+    </div>
+    <div class="container my-5">
+        <div class="section">
+            <h2>Education</h2>
+            {% for education in education_list %}
+                <div class="education-item">
+                    <h3>{{ education.degree }} in {{ education.field_of_study }}</h3>
+                    <p>
+                        <strong>{{ education.institution }}</strong>
+                        <span class="date">{{ education.start_date|date:"M Y" }} — {% if education.end_date %}{{ education.end_date|date:"M Y" }}{% else %}Present{% endif %}</span>
+                    </p>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="section">
+            <h2>Experience</h2>
+            {% for experience in experience_list %}
+                <div class="experience-item">
+                    <h3>{{ experience.position }}</h3>
+                    <p>
+                        <strong>{{ experience.company }}</strong>
+                        <span class="date">{{ experience.start_date|date:"M Y" }} — {% if experience.end_date %}{{ experience.end_date|date:"M Y" }}{% else %}Present{% endif %}</span>
+                    </p>
+                    <p>{{ experience.description }}</p>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="section">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                {% for skill in skill_list %}
+                    <li>{{ skill.name }} - Proficiency: {{ skill.proficiency }}/10</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Projects</h2>
+            {% for project in project_list %}
+                <div class="project">
+                    <h3>{{ project.name }}</h3>
+                    <p>{{ project.description }}</p>
+                    {% if project.link %}
+                        <p>Link: <a href="{{ project.link }}" target="_blank">{{ project.link }}</a></p>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

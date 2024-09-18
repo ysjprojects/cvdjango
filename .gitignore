@@ -1,0 +1,56 @@
+# Python-specific files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.log
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+env.bak/
+
+# Django-specific files
+*.sqlite3
+*.db
+
+# PyCharm-specific files (if using PyCharm)
+.idea/
+
+# VSCode-specific files (if using VSCode)
+.vscode/
+
+# macOS-specific files
+.DS_Store
+
+# Environment variables file
+.env
+
+# Celery related files
+celerybeat-schedule
+
+# Coverage files
+.coverage
+htmlcov/
+.coverage.*
+
+# mypy
+.mypy_cache/
+
+# Testing and documentation
+*.cover
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+.cache
+
+# Local translations
+*.mo
